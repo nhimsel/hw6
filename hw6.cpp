@@ -21,6 +21,7 @@ char returnRepeating(string s);
 string toLower(string s);
 bool isAnagram(string s, string z);
 int numDigits(int n);
+int calcGCD(int n1, int n2);
 
 int main()
 {
@@ -244,4 +245,11 @@ int numDigits(int n)
     }
     while (n!=0);
     return i;
+}
+
+int calcGCD(int n1, int n2)
+{
+    if (n1==0) return n2;
+    else if (n2==0) return n1;
+    else return calcGCD(n2,n1%n2);
 }
