@@ -19,6 +19,7 @@ int numWords(string s);
 bool isPerfect(int i);
 char returnRepeating(string s);
 string toLower(string s);
+bool isAnagram(string s, string z);
 
 int main()
 {
@@ -203,4 +204,31 @@ string toLower(string s)
         else l+=s[i];
     }
     return l;
+}
+
+bool isAnagram(string s, string z)
+{
+    if (s.length()==z.length())
+    {
+        string c = "";
+        for (int i=0; i<s.length(); i++)
+        {
+            c+=s[i];
+        }
+        for (int i=0; i<z.length(); i++)
+        {
+            for (int n=0; n<c.length(); n++)
+            {
+                if (z[i]==c[n]) c[n]=' ';
+            }
+        }
+        int t=0;
+        for (int i=0; i<c.length(); i++)
+        {
+            if (c[i]==' ') t++;
+        }
+        if (t==c.length()) return true;
+
+    }
+    return false;
 }
