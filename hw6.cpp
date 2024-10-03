@@ -9,10 +9,11 @@ string stringConcat(string s, string z);
 int larger(int i1, int i2);
 int vowelNum(string s);
 bool isPrime(int i);
+void printASCII(char c);
 
 int main()
 {
-         
+    
     return 0;
 }
 
@@ -66,4 +67,9 @@ bool isPrime(int i)
         if(i%n==0) return false;
     }
     return true;
+}
+
+void printASCII(char c)
+{
+    cout << (int)c;
 }
