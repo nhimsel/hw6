@@ -12,6 +12,7 @@ bool isPrime(int i);
 void printASCII(char c);
 int digitSum(int i);
 string reverse(string s);
+bool isPalindrome(string s);
 
 int main()
 {
@@ -95,4 +96,22 @@ string reverse(string s)
         r+=s[i];
     }
     return r;
+}
+
+bool isPalindrome(string s)
+{
+
+    //clean out the junk
+    string r = "";
+    for (int i = 0; i<s.length(); i++)
+    {
+        if ((s[i]>='a'&&s[i]<='z')||(s[i]>='A'&&s[i]<='Z'))
+        {
+            if (s[i]>='a'&&s[i]<='z') r+=s[i];
+            else r+=(s[i]+32);
+        }
+    }
+    if (r==reverse(r)) return true;
+    else return false;
+
 }
