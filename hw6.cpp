@@ -17,6 +17,7 @@ int sumEven(int n);
 string longestWord(string s);
 int numWords(string s);
 bool isPerfect(int i);
+char returnRepeating(string s);
 
 int main()
 {
@@ -179,4 +180,15 @@ bool isPerfect(int i)
     }
     if (t==i) return true;
     return false;
+}
+
+char returnRepeating(string s)
+{
+    char c = s[0];
+    for (int i=1; i<s.length(); i++)
+    {
+        if (c==s[i]) return c;
+        c = s[i];
+    }
+    return ' ';
 }
