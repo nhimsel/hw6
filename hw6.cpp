@@ -13,6 +13,7 @@ void printASCII(char c);
 int digitSum(int i);
 string reverse(string s);
 bool isPalindrome(string s);
+int sumEven(int n);
 
 int main()
 {
@@ -101,7 +102,6 @@ string reverse(string s)
 bool isPalindrome(string s)
 {
 
-    //clean out the junk
     string r = "";
     for (int i = 0; i<s.length(); i++)
     {
@@ -114,4 +114,16 @@ bool isPalindrome(string s)
     if (r==reverse(r)) return true;
     else return false;
 
+}
+
+int sumEven(int n)
+{
+    int tmp=0;
+    if(n%2==1) n--;
+    while (n>0)
+    {
+        tmp+=n;
+        n-=2;   
+    }
+    return tmp;
 }
