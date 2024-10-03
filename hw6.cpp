@@ -6,6 +6,7 @@ void isVowel(char c);
 int addition(int i, int n);
 void isUppercase(string s);
 string stringConcat(string s, string z);
+int larger(int i1, int i2);
 
 int main()
 {
@@ -38,4 +39,10 @@ void isUppercase(string s)
 string stringConcat(string s, string z)
 {
     return (s+z);
+}
+
+int larger(int i1, int i2)
+{
+    if (i1>i2) return i1;
+    else return i2;
 }
