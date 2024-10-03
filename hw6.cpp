@@ -16,6 +16,7 @@ bool isPalindrome(string s);
 int sumEven(int n);
 string longestWord(string s);
 int numWords(string s);
+bool isPerfect(int i);
 
 int main()
 {
@@ -167,4 +168,15 @@ int numWords(string s)
         else if (i==s.length()-1 && s[i]!=' ') n++;
     }
     return n;
+}
+
+bool isPerfect(int i)
+{
+    int t=0;
+    for (int n=1; n<i; n++)
+    {
+        if (i%n==0) t+=n;
+    }
+    if (t==i) return true;
+    return false;
 }
