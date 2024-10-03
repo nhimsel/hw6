@@ -10,6 +10,7 @@ int larger(int i1, int i2);
 int vowelNum(string s);
 bool isPrime(int i);
 void printASCII(char c);
+int digitSum(int i);
 
 int main()
 {
@@ -72,4 +73,15 @@ bool isPrime(int i)
 void printASCII(char c)
 {
     cout << (int)c;
+}
+
+int digitSum(int i)
+{
+    int n=0;
+    while (i!=0)
+    {
+        n+=i%10;
+        i/=10;
+    }
+    return n;
 }
