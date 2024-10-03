@@ -15,6 +15,7 @@ string reverse(string s);
 bool isPalindrome(string s);
 int sumEven(int n);
 string longestWord(string s);
+int numWords(string s);
 
 int main()
 {
@@ -155,4 +156,15 @@ string longestWord(string s)
         }
     }
     return s.substr(i,l);
+}
+
+int numWords(string s)
+{
+    int n=0;
+    for (int i=0; i<s.length(); i++)
+    {
+        if (s[i]==' ') n++;
+        else if (i==s.length()-1 && s[i]!=' ') n++;
+    }
+    return n;
 }
