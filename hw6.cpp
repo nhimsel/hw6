@@ -7,10 +7,11 @@ int addition(int i, int n);
 void isUppercase(string s);
 string stringConcat(string s, string z);
 int larger(int i1, int i2);
+int vowelNum(string s);
 
 int main()
 {
-    
+      
     return 0;
 }
 
@@ -45,4 +46,14 @@ int larger(int i1, int i2)
 {
     if (i1>i2) return i1;
     else return i2;
+}
+
+int vowelNum(string s)
+{
+    int n=0;
+    for (int i=0; i<s.length(); i++)
+    {
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u') n++;
+    }
+    return n;
 }
