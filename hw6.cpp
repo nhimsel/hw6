@@ -11,6 +11,7 @@ int vowelNum(string s);
 bool isPrime(int i);
 void printASCII(char c);
 int digitSum(int i);
+string reverse(string s);
 
 int main()
 {
@@ -84,4 +85,14 @@ int digitSum(int i)
         i/=10;
     }
     return n;
+}
+
+string reverse(string s)
+{
+    string r = "";
+    for (int i = s.length()-1; i>=0; i--)
+    {
+        r+=s[i];
+    }
+    return r;
 }
