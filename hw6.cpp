@@ -4,10 +4,11 @@ using namespace std;
 
 void isVowel(char c);
 int addition(int i, int n);
+void isUppercase(string s);
 
 int main()
 {
-    cout << addition(2,3);
+    
     return 0;
 }
 
@@ -20,4 +21,15 @@ void isVowel(char c)
 int addition(int i, int n)
 {
     return (i+n);
+}
+
+void isUppercase(string s)
+{
+    int lwr = 0;
+    for (int i=0; i<s.length(); i++)
+    {
+        if (s[i]>='a'&&s[i]<='z') lwr++;
+    }
+    if (lwr>0) cout << "Not Uppercase";
+    else cout << "Uppercase";
 }
