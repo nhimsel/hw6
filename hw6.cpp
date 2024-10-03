@@ -18,6 +18,7 @@ string longestWord(string s);
 int numWords(string s);
 bool isPerfect(int i);
 char returnRepeating(string s);
+string toLower(string s);
 
 int main()
 {
@@ -191,4 +192,15 @@ char returnRepeating(string s)
         c = s[i];
     }
     return ' ';
+}
+
+string toLower(string s)
+{
+    string l;
+    for (int i=0; i<s.length(); i++)
+    {
+        if (s[i]>='A'&&s[i]<='Z') l+=(s[i]+32);
+        else l+=s[i];
+    }
+    return l;
 }
