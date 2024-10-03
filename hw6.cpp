@@ -5,6 +5,7 @@ using namespace std;
 void isVowel(char c);
 int addition(int i, int n);
 void isUppercase(string s);
+string stringConcat(string s, string z);
 
 int main()
 {
@@ -32,4 +33,9 @@ void isUppercase(string s)
     }
     if (lwr>0) cout << "Not Uppercase";
     else cout << "Uppercase";
+}
+
+string stringConcat(string s, string z)
+{
+    return (s+z);
 }
