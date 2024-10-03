@@ -20,6 +20,7 @@ bool isPerfect(int i);
 char returnRepeating(string s);
 string toLower(string s);
 bool isAnagram(string s, string z);
+int numDigits(int n);
 
 int main()
 {
@@ -231,4 +232,16 @@ bool isAnagram(string s, string z)
 
     }
     return false;
+}
+
+int numDigits(int n)
+{
+    int i = 0;
+    do 
+    {
+        n/=10;
+        i++;
+    }
+    while (n!=0);
+    return i;
 }
